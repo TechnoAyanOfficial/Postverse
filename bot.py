@@ -4,15 +4,15 @@ import pyrogram.errors
 app = Client("Postverse", api_id=938340, api_hash="4c47ceee0c51daa3e6608dd728c6148d", bot_token="1131492061:AAEYmA87jCCUVBXwzhBu50fuZJvRmg0Hz0A")
 groups = ['gforgroup']
 admins = [1074490547, 1111847352, 820463901]
+
 @app.on_message(Filters.command(['start']))
 
 def download(client, message):
 	user_id = message.from_user.id
-	for admin in admins:
-		if not user_id == admin:
-			message.reply_text('You Are Not Admin of This Bot')
-		else:
-			message.reply_text("Just Send Me Any Text Message I'll Forward It To All Saved Groups!")
+	if not user_id in admins:
+		message.reply_text('You Are Not Admin of This Bot')
+	else:
+		message.reply_text("Just Send Me Any Text Message I'll Forward It To All Saved Groups!")
 			
 @app.on_message(Filters.text)
 def download(client, message):
