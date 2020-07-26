@@ -7,9 +7,8 @@ admins = [1074490547, 1111847352, 820463901]
 @app.on_message(Filters.command(['start']))
 
 def download(client, message):
-	message.reply_text('Just Send Me Any Text Message I'll Forward It To All Saved Groups!
-')
-	
+	message.reply_text("Just Send Me Any Text Message I'll Forward It To All Saved Groups!")
+
 @app.on_message(Filters.text)
 def download(client, message):
 	count = 1
