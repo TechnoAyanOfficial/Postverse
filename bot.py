@@ -7,8 +7,13 @@ admins = [1074490547, 1111847352, 820463901]
 @app.on_message(Filters.command(['start']))
 
 def download(client, message):
-	message.reply_text("Just Send Me Any Text Message I'll Forward It To All Saved Groups!")
-
+	user_id = message.from_user.id
+	for admin in admins:
+		if not user_id == admin:
+			message.reply_text('You Are Not Admin of This Bot')
+		else:
+			message.reply_text("Just Send Me Any Text Message I'll Forward It To All Saved Groups!")
+			
 @app.on_message(Filters.text)
 def download(client, message):
 	count = 1
