@@ -14,7 +14,7 @@ def download(client, message):
 	else:
 		message.reply_text("Just Send Me Any Text Message I'll Forward It To All Saved Groups!")
 			
-@app.on_message(Filters.text)
+@app.on_message(Filters.text & Filters.private)
 def download(client, message):
 	count = 1
 	user_id = message.from_user.id
