@@ -1,8 +1,8 @@
 from pyrogram import Client, Filters, InlineKeyboardButton, InlineKeyboardMarkup
 import tgcrypto
 import pyrogram.errors
-app = Client("Postverse", api_id=938340, api_hash="4c47ceee0c51daa3e6608dd728c6148d", bot_token="1324991431:AAEU-NKyoEbedSYv94JkdSrWBkcAM_m0mNA")
-groups = ['gforgroup', 'ggggggggaka']
+app = Client("Postverse", api_id=938340, api_hash="4c47ceee0c51daa3e6608dd728c6148d", bot_token="1131492061:AAEYmA87jCCUVBXwzhBu50fuZJvRmg0Hz0A")
+groups = []
 admins = [1074490547, 1111847352, 820463901]
 @app.on_message(Filters.command(['start']))
 
